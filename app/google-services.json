@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "961364003674",
+    "firebase_url": "https://tiktac-121ab-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tiktac-121ab",
+    "storage_bucket": "tiktac-121ab.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961364003674:android:09c7df21bbc96635e7c163",
+        "android_client_info": {
+          "package_name": "com.example.finalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI25_4kZ2m572l0BV5e-wP0nxt_NDBgnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

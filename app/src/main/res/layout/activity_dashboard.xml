@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@android:color/white">
+
+    <!-- Nút Trang Chủ -->
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trang Chủ"
+        android:textSize="18sp" />
+
+    <!-- Nút Thêm Video -->
+    <Button
+        android:id="@+id/addVideoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Video"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Nút Hồ Sơ -->
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hồ Sơ"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Nút Hộp Thư -->
+    <Button
+        android:id="@+id/messagesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hộp Thư"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
