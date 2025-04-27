@@ -43,7 +43,10 @@ dependencies {
     implementation(libs.firebase.database)       // Không cần version
     implementation(libs.firebase.common)         // Không cần version
     implementation(libs.firebase.firestore)      // Không cần version
-    implementation(libs.firebase.auth)           // Không cần version
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.analytics)
+    implementation(libs.picasso)
+    implementation(libs.google.services)           // Không cần version
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

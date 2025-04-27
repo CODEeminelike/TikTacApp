@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- EditText for Email -->
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="match_parent"
@@ -12,6 +13,7 @@
         android:hint="Email"
         android:inputType="textEmailAddress" />
 
+    <!-- EditText for Password -->
     <EditText
         android:id="@+id/passwordEditText"
         android:layout_width="match_parent"
@@ -19,6 +21,47 @@
         android:hint="Password"
         android:inputType="textPassword" />
 
+    <!-- EditText for Name -->
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:inputType="textPersonName" />
+
+    <!-- EditText for Age -->
+    <EditText
+        android:id="@+id/ageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:inputType="number" />
+
+    <!-- EditText for Occupation -->
+    <EditText
+        android:id="@+id/occupationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Occupation"
+        android:inputType="text" />
+
+    <!-- EditText for Birthday -->
+    <EditText
+        android:id="@+id/birthdayEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Birthday (YYYY-MM-DD)"
+        android:inputType="date" />
+
+    <!-- EditText for Address -->
+    <EditText
+        android:id="@+id/addressEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:inputType="textPostalAddress" />
+
+    <!-- Register Button -->
     <Button
         android:id="@+id/registerButton"
         android:layout_width="match_parent"

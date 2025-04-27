@@ -45,7 +45,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     // Chuyển đến màn hình hồ sơ (Profile)
     private void navigateToProfile() {
-        Intent intent = new Intent(DashboardActivity.this, ProfileActivity.class); // Giả sử bạn có một Activity cho Hồ Sơ
+        Intent intent = new Intent(DashboardActivity.this, UserProfileActivity.class); // Giả sử bạn có một Activity cho Hồ Sơ
         startActivity(intent);
     }
 
