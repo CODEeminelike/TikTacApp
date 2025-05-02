@@ -1,5 +1,6 @@
 package com.example.finalproject.post;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -8,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.finalproject.API.ImageUploadActivity;
 import com.example.finalproject.R;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,12 +21,15 @@ import java.util.Map;
 
 public class CreatePostActivity extends AppCompatActivity {
     private static final String TAG = "CreatePostActivity";
+    private static final int UPLOAD_IMAGE_REQUEST = 101;
     private FirebaseAuth mAuth;
     private FirebaseFirestore db;
     private TextView userNameText;
-    private EditText imageUrlEditText;
+    private EditText titleEditText;
+    private Button selectImageButton;
     private Button postButton;
     private String userName;
+    private String imageUrl; // Lưu URL ảnh từ ImageUploadActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +40,33 @@ public class CreatePostActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         userNameText = findViewById(R.id.user_name_text);
-        imageUrlEditText = findViewById(R.id.image_url_edit_text);
+        titleEditText = findViewById(R.id.title_edit_text);
+        selectImageButton = findViewById(R.id.select_image_button);
         postButton = findViewById(R.id.post_button);
 
         // Lấy thông tin người dùng
         fetchUserInfo();
 
+        // Mở ImageUploadActivity khi nhấn nút chọn ảnh
+        selectImageButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ImageUploadActivity.class);
+            startActivityForResult(intent, UPLOAD_IMAGE_REQUEST);
+        });
+
         postButton.setOnClickListener(v -> createPost());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == UPLOAD_IMAGE_REQUEST && resultCode == RESULT_OK && data != null) {
+            imageUrl = data.getStringExtra("imageUrl");
+            if (imageUrl != null) {
+                Toast.makeText(this, "Đã chọn ảnh thành công!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Không nhận được URL ảnh", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     private void fetchUserInfo() {
@@ -72,10 +97,15 @@ public class CreatePostActivity extends AppCompatActivity {
     }
 
     private void createPost() {
-        String imageUrl = imageUrlEditText.getText().toString().trim();
+        String title = titleEditText.getText().toString().trim();
 
-        if (imageUrl.isEmpty()) {
-            Toast.makeText(this, "Vui lòng nhập URL ảnh", Toast.LENGTH_SHORT).show();
+        if (title.isEmpty()) {
+            Toast.makeText(this, "Vui lòng nhập tiêu đề bài post", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (imageUrl == null || imageUrl.isEmpty()) {
+            Toast.makeText(this, "Vui lòng chọn ảnh trước khi đăng", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -86,6 +116,7 @@ public class CreatePostActivity extends AppCompatActivity {
 
         // Tạo dữ liệu bài post
         Map<String, Object> postData = new HashMap<>();
+        postData.put("title", title);
         postData.put("userName", userName);
         postData.put("imageUrl", imageUrl);
         postData.put("timestamp", Timestamp.now());

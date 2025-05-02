@@ -1,6 +1,7 @@
 package com.example.finalproject.API;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -145,6 +146,11 @@ public class ImageUploadActivity extends AppCompatActivity {
                         runOnUiThread(() -> {
                             uploadResultText.setText("URL: " + imageUrl);
                             Toast.makeText(this, "Tải lên thành công!", Toast.LENGTH_SHORT).show();
+                            // Trả về URL qua Intent
+                            Intent result = new Intent();
+                            result.putExtra("imageUrl", imageUrl);
+                            setResult(RESULT_OK, result);
+                            finish();
                         });
                     } else {
                         runOnUiThread(() -> Toast.makeText(this, "Tải lên thất bại", Toast.LENGTH_SHORT).show());
