@@ -7,6 +7,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.finalproject.R;
+import com.example.finalproject.post.RecentPostsActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     // Chuyển đến trang chủ (Home)
     private void navigateToHome() {
-        Intent intent = new Intent(DashboardActivity.this, DashboardActivity.class); // Giả sử bạn có một Activity cho Trang Chủ
+        Intent intent = new Intent(DashboardActivity.this, RecentPostsActivity.class); // Giả sử bạn có một Activity cho Trang Chủ
         startActivity(intent);
     }
 

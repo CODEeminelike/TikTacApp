@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.finalproject.API.ImageUploadActivity;
 import com.example.finalproject.R;
 import com.example.finalproject.post.CreatePostActivity;
+import com.example.finalproject.post.UserPostsActivity;
 
 public class PhotosActivity extends AppCompatActivity {
 
@@ -20,6 +21,7 @@ public class PhotosActivity extends AppCompatActivity {
         Button openCameraButton = findViewById(R.id.open_camera_button);
         Button openGalleryButton = findViewById(R.id.open_gallery_button);
         Button openPostButton = findViewById(R.id.open_post_button);
+        Button openMyPostButton = findViewById(R.id.open_mypost_button);
 
         openCameraButton.setOnClickListener(v -> {
             // Tạo Intent để mở CameraActivity
@@ -36,6 +38,12 @@ public class PhotosActivity extends AppCompatActivity {
         openPostButton.setOnClickListener(v -> {
             // Tạo Intent để mở GalleryActivity
             Intent intent = new Intent(PhotosActivity.this, CreatePostActivity.class);
+            startActivity(intent);
+        });
+
+        openMyPostButton.setOnClickListener(v -> {
+            // Tạo Intent để mở GalleryActivity
+            Intent intent = new Intent(PhotosActivity.this, UserPostsActivity.class);
             startActivity(intent);
         });
     }

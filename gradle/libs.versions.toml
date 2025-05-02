@@ -24,7 +24,8 @@ glide = "5.0.0-rc01"
 volley = "1.2.1"
 activityKtx = "1.8.0"
 json = "20250107"
-okhttp = "5.0.0-alpha.14"  # Cập nhật lên phiên bản mới nhất
+okhttp = "5.0.0-alpha.14"
+viewpager2 = "1.1.0"  # Cập nhật lên phiên bản mới nhất
 
 [libraries]
 # Thư viện Android
@@ -60,6 +61,7 @@ volley = { group = "com.android.volley", name = "volley", version.ref = "volley"
 androidx-activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
 json = { group = "org.json", name = "json", version.ref = "json" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+androidx-viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }

@@ -60,7 +60,8 @@ dependencies {
     implementation(libs.volley)
     implementation(libs.androidx.activity.ktx)
     implementation(libs.json)
-    implementation(libs.okhttp)           // Không cần version
+    implementation(libs.okhttp)
+    implementation(libs.androidx.viewpager2)           // Không cần version
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

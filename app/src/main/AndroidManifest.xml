@@ -30,6 +30,12 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
+            android:name=".post.UserPostsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.RecentPostsActivity"
+            android:exported="false" />
+        <activity
             android:name=".post.CreatePostActivity"
             android:exported="false" />
         <activity
