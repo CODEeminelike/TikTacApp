@@ -12,4 +12,33 @@
         android:layout_height="wrap_content"
         android:textSize="16sp" />
 
+    <Button
+        android:id="@+id/like_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Like"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/dislike_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dislike"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/comment_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập bình luận"
+        android:inputType="text"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/comment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gửi bình luận"
+        android:layout_marginTop="8dp" />
+
 </LinearLayout>

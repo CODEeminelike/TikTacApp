@@ -13,6 +13,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -23,6 +24,7 @@ public class RecentPostsActivity extends AppCompatActivity {
     private ViewPager2 viewPager;
     private PostAdapter postAdapter;
     private List<Map<String, Object>> posts = new ArrayList<>();
+    private List<String> postIds = new ArrayList<>();
     private DocumentSnapshot lastVisible;
     private boolean isLoading = false;
 
@@ -68,7 +70,9 @@ public class RecentPostsActivity extends AppCompatActivity {
                                 .get(queryDocumentSnapshots.size() - 1);
 
                         for (DocumentSnapshot document : queryDocumentSnapshots) {
-                            posts.add(document.getData());
+                            Map<String, Object> postData = new HashMap<>(document.getData());
+                            posts.add(postData);
+                            postIds.add(document.getId());
                         }
                         postAdapter.notifyDataSetChanged();
                     } else {
@@ -91,7 +95,7 @@ public class RecentPostsActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-            return PostFragment.newInstance(posts.get(position));
+            return PostFragment.newInstance(posts.get(position), postIds.get(position));
         }
 
         @Override
