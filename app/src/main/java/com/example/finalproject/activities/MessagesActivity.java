@@ -1,4 +1,4 @@
-package com.example.finalproject.activites;
+package com.example.finalproject.activities;
 
 import android.os.Bundle;
 

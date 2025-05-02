@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- Consolidated camera feature, assuming it's required -->
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" /> <!-- Added microphone feature for RECORD_AUDIO -->
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" /> <!-- Consolidated permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
 
     <application
         android:allowBackup="true"
@@ -13,34 +30,46 @@
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
-            android:name=".activites.UserProfileActivity"
+            android:name=".post.CreatePostActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.PhotosActivity"
+            android:name=".API.ImageUploadActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.VideoActivity"
+            android:name=".API.ImgbbUploadActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.EditProfileActivity"
+            android:name=".activities.GalleryActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.MessagesActivity"
+            android:name=".activities.CameraActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.ProfileActivity"
+            android:name=".activities.UserProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.AddVideoActivity"
+            android:name=".activities.PhotosActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.DashboardActivity"
+            android:name=".activities.VideoActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.RegisterActivity"
+            android:name=".activities.MessagesActivity"
             android:exported="false" />
         <activity
-            android:name=".activites.LoginActivity"
+            android:name=".activities.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddVideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

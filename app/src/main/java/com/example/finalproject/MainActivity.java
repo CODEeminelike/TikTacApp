@@ -2,7 +2,6 @@ package com.example.finalproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -39,13 +38,13 @@ public class MainActivity extends AppCompatActivity {
 
     // Navigate to LoginActivity
     private void navigateToLogin() {
-        Intent intent = new Intent(MainActivity.this, com.example.finalproject.activites.LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, com.example.finalproject.activities.LoginActivity.class);
         startActivity(intent);
     }
 
     // Navigate to RegisterActivity
     private void navigateToRegister() {
-        Intent intent = new Intent(MainActivity.this, com.example.finalproject.activites.RegisterActivity.class);
+        Intent intent = new Intent(MainActivity.this, com.example.finalproject.activities.RegisterActivity.class);
         startActivity(intent);
     }
 }

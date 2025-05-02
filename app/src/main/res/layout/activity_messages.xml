@@ -5,6 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activites.MessagesActivity">
+    tools:context=".activities.MessagesActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,7 @@
-package com.example.finalproject.activites;
+package com.example.finalproject.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     // Chuyển đến màn hình Thông tin cá nhân
     private void navigateToPersonalInfo() {
-        Intent intent = new Intent(ProfileActivity.this, EditProfileActivity.class); // Giả sử bạn có một Activity cho Thông tin cá nhân
+        Intent intent = new Intent(ProfileActivity.this, UserProfileActivity.class); // Giả sử bạn có một Activity cho Thông tin cá nhân
         startActivity(intent);
     }
 

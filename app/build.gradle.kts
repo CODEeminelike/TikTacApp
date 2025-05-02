@@ -46,7 +46,21 @@ dependencies {
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
     implementation(libs.picasso)
-    implementation(libs.google.services)           // Không cần version
+    implementation(libs.google.services)
+    implementation(libs.camera.core)
+    implementation(libs.camera.camera2)
+    implementation(libs.camera.lifecycle)
+    implementation(libs.camera.video)
+    implementation(libs.camera.view)
+    implementation(libs.camera.extensions)
+    implementation(libs.guava)
+    implementation(libs.recyclerview)
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.glide)
+    implementation(libs.volley)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.json)
+    implementation(libs.okhttp)           // Không cần version
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

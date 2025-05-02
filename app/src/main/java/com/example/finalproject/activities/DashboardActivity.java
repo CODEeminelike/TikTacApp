@@ -1,8 +1,7 @@
-package com.example.finalproject.activites;
+package com.example.finalproject.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -39,7 +38,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     // Chuyển đến màn hình thêm video
     private void navigateToAddVideo() {
-        Intent intent = new Intent(DashboardActivity.this, AddVideoActivity.class); // Giả sử bạn có một Activity cho Thêm Video
+        Intent intent = new Intent(DashboardActivity.this, PhotosActivity.class); // Giả sử bạn có một Activity cho Thêm Video
         startActivity(intent);
     }
 
